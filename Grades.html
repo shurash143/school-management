@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades Dashboard</title>
+    <style>
+        /* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    display: flex;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar h2 {
+    color: white;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    padding: 10px 20px;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.nav li a:hover {
+    background-color: #555;
+}
+
+/* Main content styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Grades list styles */
+.grades-list {
+    margin-top: 20px;
+}
+
+.grade {
+    
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.grade-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+
+    color: black;
+}
+
+.grade-header:hover {
+    background-color: #45a049;
+}
+
+.grade-details {
+    padding: 10px;
+    display: none;
+    background-color: #f9f9f9;
+}
+
+.filter-btn {
+    margin: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>School</h2>
+            </div>
+            <ul class="nav">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="/assignments.html">Assignments</a></li>
+                <li><a href="#">Grades</a></li>
+                
+                <li><a href="/calender.html">Calendar</a></li>
+                <li><a href="#">Notifications</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h1>Grades</h1>
+            <button class="filter-btn">Show by Date</button>
+            <button class="filter-btn">Show by Type</button>
+
+            <div class="grades-list">
+                <div class="grade">
+                    <div class="grade-header" onclick="toggleGradeDetails(1)">
+                        <span>Complete Your First Software Engineering Assignment</span>
+                        <span>- 1 pts</span>
+                    </div>
+                    <div class="grade-details" id="grade-1">
+                        <p>Grade: 1/1</p>
+                        <p>Status: Graded</p>
+                    </div>
+                </div>
+                <div class="grade">
+                    <div class="grade-header" onclick="toggleGradeDetails(2)">
+                        <span>Git Basics Lab</span>
+                        <span>- 1 pts</span>
+                    </div>
+                    <div class="grade-details" id="grade-2">
+                        <p>Grade: 0.5/1</p>
+                        <p>Status: Graded</p>
+                    </div>
+                </div>
+                <div class="grade">
+                    <div class="grade-header" onclick="toggleGradeDetails(3)">
+                        <span>Your First HTML Tag Lab</span>
+                        <span>- 1 pts</span>
+                    </div>
+                    <div class="grade-details" id="grade-3">
+                        <p>Grade: Not Yet Graded</p>
+                        <p>Status: Pending</p>
+                    </div>
+                </div>
+                <!-- Add more grades here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+// JavaScript to toggle grade details on click
+function toggleGradeDetails(id) {
+    var details = document.getElementById('grade-' + id);
+    
+    if (details.style.display === "block") {
+        details.style.display = "none";
+    } else {
+        details.style.display = "block";
+    }
+}
+
+    </script>
+</body>
+</html>

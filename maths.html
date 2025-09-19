@@ -1,0 +1,126 @@
+<!-- math.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Math Assignments - Teacher Sarah</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            max-width: 750px;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        .back-link {
+            display: block;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 16px;
+        }
+        .back-link a {
+            color: #1d6de4;
+            text-decoration: none;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+        /* Submission form container */
+form.submission-form {
+    margin-top: 40px;
+    background: #dff0ff; /* light blue background */
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    max-width: 700px;
+    font-family: Arial, sans-serif;
+}
+
+/* Form labels */
+form.submission-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #005f8a; /* dark blue */
+    font-size: 16px;
+}
+
+/* Text input and file input styles */
+form.submission-form input[type="text"],
+form.submission-form input[type="file"] {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #a1c8e9; /* light border */
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Submit button */
+form.submission-form button {
+    background-color: #0077b6; /* blue */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for submit button */
+form.submission-form button:hover {
+    background-color: #005f8a; /* darker blue */
+}
+
+/* Small note text */
+form.submission-form small {
+    color: #555;
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Math Assignments</h1>
+    <h2>Prepared by Teacher Sarah</h2>
+
+    <ol>
+        <li>5 + 7 = ____</li>
+        <li>12 - 6 = ____</li>
+        <li>What is 8 more than 9?</li>
+        <li>Tom had 14 apples and gave away 5. How many are left?</li>
+        <li>Circle the numbers that add up to 20: 3, 17, 10, 9, 8, 12</li>
+    </ol>
+
+    <form class="submission-form" action="YOUR_SERVER_ENDPOINT_HERE" method="POST" enctype="multipart/form-data">
+    <h2>Submit Your Assignment</h2>
+    <label for="studentName">Student Name:</label>
+    <input type="text" id="studentName" name="studentName" placeholder="Enter your full name" required />
+
+    <label for="assignmentFile">Upload your assignment file:</label>
+    <input type="file" id="assignmentFile" name="assignmentFile" accept=".pdf,.doc,.docx,.jpg,.png" required />
+
+    <button type="submit">Submit Assignment</button>
+    <small>Note: Please fill your name and upload the correct file.</small>
+</form>
+
+
+    <div class="back-link">
+        <a href="/assignments.html">&larr; Back to Subjects</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,197 @@
+{
+  "users": [
+    {
+      "id": "c6a8",
+      "name": "shukri  Admin",
+      "email": "shukri32@gmail.com",
+      "password": "admin123",
+      "role": "Admin"
+    },
+    {
+      "id": "67af",
+      "name": "shukri  Admin",
+      "email": "shukri32@gmail.com",
+      "password": "admin123",
+      "role": "Admin"
+    },
+    {
+      "id": "a7e2",
+      "name": "shukri  Admin",
+      "email": "shukri32@gmail.com",
+      "password": "admin123",
+      "role": "Teacher"
+    },
+    {
+      "id": "5b18",
+      "name": "shukri  Admin",
+      "email": "shukri32@gmail.com",
+      "password": "admin123",
+      "role": "Admin"
+    }
+  ],
+  "students": [],
+  "teachers": [
+    {
+      "id": "8aa8",
+      "Name": "sss",
+      "Email": "shukrigarad32@gmail.com",
+      "Message": "hello"
+    }
+  ],
+  "classes": [
+    {
+      "id": "de24",
+      "Name": "classA",
+      "Schedule": "monday",
+      "Teacher": ""
+    },
+    {
+      "id": "3312",
+      "Name": "classA",
+      "Teacher": "",
+      "Schedule": "monday"
+    },
+    {
+      "id": "2508",
+      "Name": "class c",
+      "Teacher": "",
+      "Schedule": "Tuesday"
+    },
+    {
+      "id": "3649",
+      "Name": "classA",
+      "TeacherNAME": "",
+      "Schedule": "Tuesday"
+    },
+    {
+      "id": "9ab8",
+      "Name": "class b",
+      "Teacher": "",
+      "Schedule": "wednesday"
+    },
+    {
+      "id": "cd91",
+      "Name": "class b",
+      "Teacher": "",
+      "Schedule": "monday"
+    },
+    {
+      "id": "fbc0",
+      "Name": "classA",
+      "Teacher": "",
+      "Schedule": "Tuesday"
+    }
+  ],
+  "recentStudents": [],
+  "recentTeachers": [],
+  "recentClasses": [],
+  "totals": {
+    "totalStudents": 1000,
+    "totalTeachers": 10,
+    "totalClasses": 15
+  },
+  "notification": [
+    {
+      "title": "New Assignment",
+      "message": "HTML Tables Lab has been posted.",
+      "time": "10 Sept 2025 • 10:00 AM",
+      "id": "f1b2"
+    }
+  ],
+  "subjects": [
+    {
+      "id": "4d6e",
+      "Subject": "biology",
+      "Class": "class d",
+      "Schedule": "friday"
+    },
+    {
+      "id": "62a7",
+      "Subject": "biology",
+      "Class": "class d",
+      "Schedule": "friday"
+    },
+    {
+      "id": "43cc",
+      "Subject": "biology",
+      "Class": "class d",
+      "Schedule": "friday"
+    },
+    {
+      "id": "e9bc",
+      "Subject": "biology",
+      "Class": "class d",
+      "Schedule": "friday"
+    },
+    {
+      "id": "29de",
+      "Subject": "biology",
+      "Class": "class d",
+      "Schedule": "friday"
+    },
+    {
+      "id": "88be",
+      "Subject": "biology",
+      "Class": "class d",
+      "Schedule": "friday"
+    }
+  ],
+  "assignments": [
+    {
+      "id": "be42",
+      "Title": "biology",
+      "Class": "class c",
+      "DueDate": "2025-09-12"
+    },
+    {
+      "id": "992c",
+      "Title": "biology",
+      "Class": "class c",
+      "DueDate": "2025-09-26"
+    },
+    {
+      "id": "dbce",
+      "Title": "biology",
+      "Class": "class c",
+      "DueDate": "2025-09-03"
+    },
+    {
+      "id": "6c19",
+      "Title": "biology",
+      "Class": "class c",
+      "DueDate": "2025-09-03"
+    },
+    {
+      "id": "a8ab",
+      "Title": "biology",
+      "Class": "class c",
+      "DueDate": "2025-09-04"
+    },
+    {
+      "id": "fc7b",
+      "Title": "chemistry",
+      "Class": "class c",
+      "DueDate": "2025-09-01"
+    },
+    {
+      "id": "2cc0",
+      "Title": "biology",
+      "Class": "class c",
+      "DueDate": "2025-09-15"
+    }
+  ],
+  "form": [
+    {
+      "id": "fd12",
+      "Name": "Halima Aden",
+      "Email": "halima3@gmail.com",
+      "Message": "hi"
+    },
+    {
+      "id": "ab54",
+      "Name": "Halima Aden",
+      "Email": "halima3@gmail.com",
+      "Message": "welcome"
+    }
+  ]
+}

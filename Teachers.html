@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+    
+.header {
+  padding: 20px;
+  background-color: #f9fafb;
+}
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #2f3542;
+  color: #fff;
+  position: sticky;
+  
+  left: 0;
+  right: 0;
+  padding: 20px 10px;
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+  color: #dcdde1;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  color: #00a8ff;
+}
+
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-bar {
+  flex-grow: 1;
+  margin: 0 15px;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.topbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.topbar .avatar {
+  width: 30px;
+  height: 30px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+}
+
+.menu-icon {
+  font-size: 20px;
+  color: #444;
+}
+
+.page-header {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header h2 {
+  margin: 0;
+}
+
+.page-header p {
+  margin: 4px 0 0;
+  color: #666;
+}
+
+.add-btn {
+  background-color: #22c55e;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.add-btn i {
+  margin-right: 6px;
+}
+
+
+.stats-cards {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 220px;
+}
+
+.icon {
+  font-size: 22px;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+}
+
+.icon.green {
+  background-color: #22c55e;
+}
+.icon.blue {
+  background-color: #3b82f6;
+}
+.icon.orange {
+  background-color: #f97316;
+}
+
+        .teacher-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.teacher-card {
+  background-color: white;
+  padding: 20px;
+display: grid;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.teacher-card h3 {
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.teacher-card a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.teacher-card .profile-img {
+  width: 50px;
+  height: 50px;
+  background-color: #d1d5db;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.teacher-card i {
+  margin-right: 6px;
+  color: #888;
+}
+
+.teacher-card .tag {
+  display: flex;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 6px 0;
+  color: white;
+}
+
+.tag.stem {
+  background-color: #10b981;
+}
+
+.tag.humanities {
+  background-color: #6366f1;
+}
+
+.teacher-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #444;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a .icon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.action-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-course {
+  background-color: #28a745; /* green */
+}
+
+.btn-assignment {
+  background-color: #ff9900; /* orange */
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.dropbtn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+    </style>
+</head>
+<body>
+  <div class="container">
+  <aside class="sidebar">
+      <h2>School Admin</h2>
+      <nav>
+        <ul>
+          <li><a href="/Dashboard.html">Dashboard</a></li>
+          <li><a href="/Teachers.html">Teachers</a></li>
+          <li><a href="/students.html">Students</a></li>
+          
+          <li><a href="/signIn.html">log out</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    
+    
+    <div class="header">
+  <div class="topbar">
+    <i class="fas fa-bars menu-icon"></i>
+    <input type="text" class="search-bar" placeholder="Search students, teachers, classes...">
+    <div class="topbar-icons">
+      <i class="fas fa-bell"></i>
+      <div class="avatar"></div>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <div>
+      <h2>Teachers</h2>
+      <p>Manage faculty and staff information</p>
+    </div>
+  
+    
+    
+  <div class="header-right">
+
+<div class="dropdown">
+  <button class="dropbtn">+ Actions</button>
+  <div class="dropdown-content">
+    <a href="#" onclick="addCourse()">Add Course</a>
+    <a href="#" onclick="addAssignment()">Add Assignment</a>
+  </div>
+</div>
+  </div>    
+
+  </div>
+
+  <div class="stats-cards">
+    <div class="card">
+      <div class="icon green"><i class="fas fa-user-tie"></i></div>
+      <div>
+        <h3>156</h3>
+        <p>Total Teachers</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="icon blue"><i class="fas fa-book-open"></i></div>
+      <div>
+        <h3>8</h3>
+        <p>Departments</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="icon orange"><i class="fas fa-users"></i></div>
+      <div>
+        <h3>18.2</h3>
+        <p>Avg Students/Teacher</p>
+      </div>
+    </div>
+  </div>
+
+
+   <div class="faculty-directory">
+  <div class="faculty-search">
+    <input type="text" id="searchInput" placeholder="Search teachers by name, subject, or department...">
+  </div>
+   </div>
+
+  <div class="teacher-grid" id="teacherList">
+
+    
+    <div class="teacher-card">
+      <div class="profile-img"></div>
+      <h3>Dr. Sarah Ahmed</h3>
+      <p><a href="#">Mathematics</a></p>
+      <span class="tag stem">STEM</span>
+      <p><i class="fas fa-envelope"></i> sarah.Ahmed@school.ed</p>
+      <p><i class="fas fa-phone"></i> (+2547) 21502859</p>
+      <div class="teacher-stats">
+        <span><strong>5</strong> Classes</span>
+        <span><strong>142</strong> Students</span>
+        <span><strong>8 years</strong> Experience</span>
+      </div>
+    </div>
+  
+
+    <div class="teacher-card">
+      <div class="profile-img"></div>
+      <h3>Prof. Abdirashid matan</h3>
+      <p><a href="#">Physics</a></p>
+      <span class="tag stem">STEM</span>
+      <p><i class="fas fa-envelope"></i> Abdirashid.Matan@school.edu</p>
+      <p><i class="fas fa-phone"></i> (+2547) 11340662</p>
+      <div class="teacher-stats">
+        <span><strong>4</strong> Classes</span>
+        <span><strong>98</strong> Students</span>
+        <span><strong>12 years</strong> Experience</span>
+      </div>
+    </div>
+   
+
+    <div class="teacher-card">
+      <div class="profile-img"></div>
+      <h3>Ms. Amran</h3>
+      <p><a href="#">English Literature</a></p>
+      <span class="tag humanities">Humanities</span>
+      <p><i class="fas fa-envelope"></i> Amran.Garad@school.edu</p>
+      <p><i class="fas fa-phone"></i> (+2547) 23647276</p>
+      <div class="teacher-stats">
+        <span><strong>6</strong> Classes</span>
+        <span><strong>156</strong> Students</span>
+        <span><strong>6 years</strong> Experience</span>
+      </div>
+    </div>
+  
+  
+
+    <div class="teacher-card">
+      <div class="profile-img"></div>
+      <h3>Mr. mohamed Ali</h3>
+      <p><a href="#">History</a></p>
+      <span class="tag humanities">Humanities</span>
+      <p><i class="fas fa-envelope"></i> mohamed.Ali@school.edu</p>
+      <p><i class="fas fa-phone"></i> (+2547) 20015541</p>
+      <div class="teacher-stats">
+        <span><strong>4</strong> Classes</span>
+        <span><strong>112</strong> Students</span>
+        <span><strong>15 years</strong> Experience</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Subject Form Modal -->
+<div id="subjectModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeSubjectForm()">&times;</span>
+    <h3>Add New Subject</h3>
+    <form id="subjectForm">
+      <label>Subject Name:</label>
+      <input type="text" id="subjectName" required><br>
+
+      <label>Class:</label>
+      <input type="text" id="subjectClass" required><br>
+
+      <label>Schedule:</label>
+      <input type="text" id="subjectSchedule" required><br>
+
+      <button type="submit">Add Subject</button>
+    </form>
+  </div>
+</div>
+
+<!-- Assignment Modal -->
+<div id="assignmentModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeAssignmentForm()">&times;</span>
+    <h3>Add New Assignment</h3>
+    <form id="assignmentForm">
+      <label>Title:</label>
+      <input type="text" id="assignmentTitle" required><br>
+
+      <label>Class:</label>
+      <input type="text" id="assignmentClass" required><br>
+
+      <label>Due Date:</label>
+      <input type="date" id="assignmentDueDate" required><br>
+
+      <button type="submit">Add Assignment</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+<script>
+  const searchInput = document.getElementById("searchInput");
+  const teacherCards = document.querySelectorAll(".teacher-card");
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase();
+
+    teacherCards.forEach(card => {
+      const name = card.querySelector("h3").textContent.toLowerCase();
+      const subject = card.querySelector("a").textContent.toLowerCase();
+      const tag = card.querySelector(".tag").textContent.toLowerCase();
+
+      const fullText = name + subject + tag;
+
+      if (fullText.includes(query)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+  function addCourse() {
+  alert("Open Add Course form...");
+  // OR open a modal / redirect
+}
+
+function addAssignment() {
+  alert("Open Add Assignment form...");
+  // OR open a modal / redirect
+}
+
+  function addCourse() {
+    document.getElementById("subjectModal").style.display = "block";
+  }
+
+  function closeCourseForm() {
+    document.getElementById("subjectModal").style.display = "none";
+  }
+
+  
+
+  
+  function addCourse() {
+    // Show the subject modal instead of course
+    document.getElementById("subjectModal").style.display = "block";
+  }
+
+  function closeSubjectForm() {
+    document.getElementById("subjectModal").style.display = "none";
+  }
+
+  // Submit subject form
+  document.getElementById("subjectForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const subject = document.getElementById("subjectName").value;
+    const className = document.getElementById("subjectClass").value;
+    const schedule = document.getElementById("subjectSchedule").value;
+
+    const subjectData = {
+      Subject: subject,
+      Class: className,
+      Schedule: schedule
+    };
+
+    // Adjust endpoint to match your DB structure
+    fetch("http://localhost:3000/subjects", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(subjectData)
+    })
+    .then(res => res.json())
+    .then(data => {
+      alert("Subject added successfully!");
+            
+
+      closeSubjectForm();
+      document.getElementById("subjectForm").reset();
+        
+
+    })
+    .catch(err => {
+      alert("Failed to add subject.");
+      console.error(err);
+    });
+  });
+
+  // Close modal on outside click
+  window.onclick = function(event) {
+    const modal = document.getElementById("subjectModal");
+    if (event.target == modal) {
+      closeSubjectForm();
+    }
+  };
+
+  // Open assignment modal
+  function addAssignment() {
+    document.getElementById("assignmentModal").style.display = "block";
+  }
+
+  // Close modal
+  function closeAssignmentForm() {
+    document.getElementById("assignmentModal").style.display = "none";
+  }
+
+  // Handle form submission
+  document.getElementById("assignmentForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const title = document.getElementById("assignmentTitle").value;
+    const className = document.getElementById("assignmentClass").value;
+    const dueDate = document.getElementById("assignmentDueDate").value;
+
+    const assignmentData = {
+      Title: title,
+      Class: className,
+      DueDate: dueDate
+    };
+
+    fetch("http://localhost:3000/assignments", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(assignmentData)
+    })
+    .then(res => {
+      if (!res.ok) throw new Error("Network error");
+      return res.json();
+    })
+    .then(data => {
+      alert("Assignment added successfully!");
+      closeAssignmentForm();
+      document.getElementById("assignmentForm").reset();
+        
+
+
+        
+
+    })
+    .catch(err => {
+      console.error("Error adding assignment:", err);
+      alert("Failed to add assignment.");
+    });
+  });
+
+  // Close modal on outside click
+  window.onclick = function(event) {
+    const modal = document.getElementById("assignmentModal");
+    if (event.target == modal) {
+      closeAssignmentForm();
+    }
+  };
+
+
+
+</script>
+
+</body>
+</html>

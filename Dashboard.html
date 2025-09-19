@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>School Management System</title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #2f3542;
+  color: #fff;
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+  color: #dcdde1;
+  text-decoration: none;
+  text-align: left;
+  align-items: last baseline;
+  border: none;
+  padding-left: 10px;
+  font-size: 16px;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  color: #00a8ff;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.header {
+  background-color: #fff;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  flex: 1 1 200px;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #2f3542;
+}
+
+.card p {
+  font-size: 16px;
+  color: #57606f;
+}
+
+
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}
+.table-section {
+  margin-top: 30px;
+}
+
+.table-section h2 {
+  margin-bottom: 15px;
+  color: #2f3542;
+}
+
+.table-container {
+  overflow-x: auto;
+  padding-right: 450px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f1f2f6;
+  color: #2f3542;
+  font-weight: 600;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.status.active {
+  background-color: #dff9fb;
+  color: #22a6b3;
+}
+
+.status.inactive {
+  background-color: #f6e58d;
+  color: #e1b12c;
+}
+
+
+@media (max-width: 600px) {
+  table {
+    min-width: 100%;
+  }
+}
+
+
+/* Title */
+.form-section h3 {
+  font-size: 22px;
+  margin-bottom: 25px;
+  color: #333;
+  border-left: 4px solid #007bff;
+  padding-left: 10px;
+}
+
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 25px;
+    width: 400px;
+    margin: 20px;
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    color: #2c3e50;
+}
+
+.card h2::before {
+    content: '👨‍🏫'; /* Use 👨‍🏫 or 🎓 for Student */
+    margin-right: 10px;
+}
+
+.card.student h2::before {
+    content: '🎓';
+}
+
+input[type="text"], input[type="number"], input[type="email"] {
+    width: 60%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+button {
+    width: 60%;
+    padding: 12px;
+    background-color: #2ecc71;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+.btn{
+  background-color: #2ecc71;
+  padding: 20px;
+}
+
+
+
+
+</style>
+</head>
+  <body>
+
+
+  <div class="dashboard">
+
+    
+    <aside class="sidebar">
+      <h2>School Admin</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="/Teachers.html">Teachers</a></li>
+          <li><a href="/students.html">Students</a></li>
+          <li><a href="/signIn.html">log out</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    
+    <main class="main-content">
+      <header class="header">
+        <h1>Dashboard</h1>
+      </header>
+
+
+      <section class="cards">
+        <div class="card">
+          <h3>Teachers</h3>
+          <p>25 Registered</p>
+          <a href="/add teachers.html"><button>add New teacher</button></a>
+        </div>
+        <div class="card">
+          <h3>Students</h3>
+          <p>300 Enrolled</p>
+         <a href="/add students.html"><button>add New Students</button></a>
+        </div>
+
+                <div class="card">
+          <h3>contacts</h3>
+          <p>35 contacted</p>
+         <a href="/Contact.html"><button>contact form</button></a>
+        </div>
+
+    
+  <div class="table-container">
+    <h2>Student List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Class</th>
+          <th>Age</th>
+          <th>Grade</th>
+          <th>Roll</th>
+          <th>Enrollment</th>
+          <th>Action</th>
+            <th>Action</th>
+
+        </tr>
+      </thead>
+      <tbody id="tBody">
+        
+      </tbody>
+    </table>
+  </div>
+
+    <div class="table-container">
+    <h2>Teacher List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          
+          <th>Experience</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Schedule</th>
+          <th>Subject</th>
+          <th>Action</th>
+           <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        
+      </tbody>
+    </table>
+  </div>
+      <div class="table-container">
+    <h2>contact List</h2>
+        <table>
+<thead>
+      <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Message</th>
+           <th>Action</th>
+          <th>Action</th>
+        
+        </tr>
+      </thead>
+      <tbody id="table">
+      </tbody>
+    </table>
+  </div>
+
+            </section>
+          </main> 
+
+                  
+
+  <script >
+  //  const API_URL = "http://localhost:3000";
+
+    
+    //fetch(`${API_URL}/users?role=Student`)
+     // .then(res => res.json())
+      //.then(students => {
+        //const list = document.getElementById('studentList');
+        //students.forEach(student => {
+          //const li = document.createElement('li');
+         // li.textContent = `${student.name} (${student.email})`;
+          //list.appendChild(li);
+     //   });
+     // });
+
+    
+   // fetch(`${API_URL}/users?role=Teacher`)
+     // .then(res => res.json())
+      //.then(teachers => {
+       // const list = document.getElementById('teacherList');
+      //teachers.forEach(teacher=> {
+        //  const li = document.createElement('li');
+        //  li.textContent = `${teacher.name} (${teacher.email})`;
+      //    list.appendChild(li);
+       // });
+
+     // });
+
+    function logout() {
+      localStorage.removeItem("loggedInUser");
+      window.location.href = "index.html";
+    }
+    
+  const user = JSON.parse(localStorage.getItem('loggedInUser'));
+  //if (!user || user.role === 'Admin') {
+    
+   // window.location.href = "Dashboard.html";
+  //}
+
+//teachers
+  document.addEventListener("DOMContentLoaded",function(){
+    fetch('https://fatuma.onrender.com/teachers')
+    .then(res=>res.json())
+    .then(teachers=>{
+      teachers.forEach(addTable)
+    })
+  })  
+  function addTable(teacher) {
+    let tbody = document.getElementById("tbody");
+    let row = document.createElement("tr");
+
+    row.innerHTML = `
+        <td>${teacher.Name}</td>
+      
+        <td>${teacher.Experience}</td>
+          <td>${teacher.Phone}</td>
+        <td>${teacher.Email}</td>
+        <td>${teacher.Schedule}</td>
+        <td>${teacher.Subject}</td>
+
+        <td>
+            <button>Delete</button></td>
+            <td>
+            <button class="update" >Update</button>
+        </td>
+    `;
+
+    tbody.appendChild(row);
+
+
+        row.querySelector('button').addEventListener('click',function(){
+      row.remove()
+      shukri(teacher.id)
+    })
+        function shukri(id){
+          fetch(`https://fatuma.onrender.com/teachers/${id}`,{
+            method:"DELETE",
+            headers:{
+              'content-type':'application/json'
+            }
+          })
+        }
+
+
+    const updateBtn = row.querySelector('.update');
+updateBtn.addEventListener('click', function () {
+    const newSchedule = prompt('Enter new schedule:', teacher.Schedule);
+    const newSubject = prompt('Enter new subject:', teacher.Subject);
+    const newName = prompt('Enter new name:', teacher.Name);
+    const newExperience = prompt('Enter new experience:', teacher.Experience);
+    const newPhone = prompt('Enter new phone number:', teacher.Phone);
+    const newEmail = prompt('Enter new email:', teacher.Email);
+
+    if (newSchedule && newSubject && newName && newExperience && newPhone && newEmail) {
+        // Update the DOM manually (assumes column order is known)
+        row.children[0].textContent = newSchedule;
+        row.children[1].textContent = newSubject;
+        row.children[2].textContent = newName;
+        row.children[3].textContent = newExperience;
+        row.children[4].textContent = newPhone;
+        row.children[5].textContent = newEmail;
+
+        // Send update to backend
+        updateTeacher(teacher.id, {
+            Schedule: newSchedule,
+            Subject: newSubject,
+            Name: newName,
+            Experience: newExperience,
+            Phone: newPhone,
+            Email: newEmail
+        });
+    }
+  })
+}
+
+      document.addEventListener("DOMContentLoaded",function(){
+    fetch('https://fatuma.onrender.com/form')
+    .then(res=>res.json())
+    .then(form=>{
+                  
+
+form.forEach(addTables)
+    })
+      
+    
+  function addTables(forms) {
+    let table = document.getElementById("table");
+    let value=document.createElement("tr")
+value.innerHTML=`
+        <td>${forms.Name}</td>
+        <td>${forms.Message}</td>
+        <td>${forms.Email}</td>
+        <td><button>Delete</button></td>
+<td> <button class="update" >Update</button>
+</td>
+    `;
+    table.appendChild(value);
+
+
+    value.querySelector('button').addEventListener('click',function(){
+      value.remove()
+      v(forms.id)
+    
+    })
+  
+        function v(id){
+           fetch(`https://fatuma.onrender.com/form/${id}`,{
+             method:"DELETE",
+             headers:{
+               'content-type':'application/json'
+             }
+            })
+          }
+  }
+        
+
+  
+        
+    const  updateBtn = value.querySelector('.update')
+    updateBtn.addEventListener('click',function(){
+      const newName=prompt('Enter new name:',form.Name);
+        const newEmail=prompt('Enter new email:',form.Email);
+      const newMessage=prompt('Enter new message:',form.Message);
+
+      if(newName && newEmail && newMessage)
+      value.children[0].textContent= newName
+          value.children[1].textContent= newEmail
+      value.children[2].textContent= newMessage;
+
+      updateForm( forms.id,{
+        Name:newName,
+          Email:newEmail,
+        Message:newMessage
+
+     })
+  })
+})
+
+
+
+
+
+
+
+
+
+    
+
+
+//student
+
+     document.addEventListener("DOMContentLoaded",function(){
+    fetch('https://fatuma.onrender.com/students')
+    .then(res=>res.json())
+    .then(students=>{
+      students.forEach(add)
+    })
+  })  
+  function add(student) {
+    let tBody = document.getElementById("tBody");
+    let col = document.createElement("tr");
+
+    col.innerHTML = `
+        <td>${student.Name}</td>
+        <td>${student.Age}</td>
+        <td>${student.Grade}</td>
+        <td>${student.Classes}</td>
+        <td>${student.Roll}</td>
+        <td>${student.Enrollment}</td>
+
+        <td>
+            <button>Delete</button></td>
+            <td>
+            <button class="update">Update</button>
+        </td>
+    `;
+
+    tBody.appendChild(col);
+
+        col.querySelector(('button')).addEventListener('click',function(){
+      col.remove()
+      s(student.id)
+    })
+
+
+    function s(id){
+  fetch(`https://fatuma.onrender.com/students/${id}`, {
+method:"DELETE",
+headers:{
+  "content-type" : "application/json"
+}
+})
+}
+
+    const updateBtn = col.querySelector('.update');
+updateBtn.addEventListener('click', function () {
+    const newName = prompt('Enter new name:', student.Name);
+    const newAge = prompt('Enter new age:', student.Age);
+    const newGrade = prompt('Enter new grade:', student.Grade);
+    const newClasses = prompt('Enter new class:', student.Classes);
+    const newRoll = prompt('Enter new roll number:', student.Roll);
+    const newEnrollment = prompt('Enter new enrollment:', student.Enrollment);
+
+    if (newName && newAge && newGrade && newClasses && newRoll && newEnrollment) {
+        
+        col.children[0].textContent = newName;
+        col.children[1].textContent = newAge;
+        col.children[2].textContent = newGrade;
+        col.children[3].textContent = newClasses;
+        col.children[4].textContent = newRoll;
+        col.children[5].textContent = newEnrollment;
+
+        //update on json
+        updateStudent(student.id, {
+            Name: newName,
+            Age: newAge,
+            Grade: newGrade,
+            Classes: newClasses,
+            Roll: newRoll,
+            Enrollment: newEnrollment
+        });
+    }
+});
+
+
+}
+
+
+
+  </script>
+</body>
+</html>

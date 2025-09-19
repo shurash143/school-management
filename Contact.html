@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - School Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+    
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+        }
+.hero {
+    background: linear-gradient(to right, #4f46e5, #3b82f6); /* Gradient background */
+    background-image: url('/canva-MADmf1uddpQ.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    padding: 100px 20px; 
+    text-align: center; 
+    color: white; 
+    height: 10vh; 
+    
+}
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero {
+    position: relative;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    color: white; 
+}
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1; 
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensures content appears on top of the video */
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: blue;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: blue;
+}
+
+
+
+        
+        .navbar {
+            background-color:rgb(25, 25, 95);
+            color: #0e0a30;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar .logo {
+            font-size: 25px;
+             float: left;
+    
+            color: white;
+            text-decoration: none;
+        }
+        
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin: 0 1.5rem;
+        }
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .navbar ul li a:hover {
+            text-decoration: none;
+        }
+        .navbar .btn {
+display: flex;
+gap: 10px;
+        }
+        
+
+.navbar .nav-btn {
+  padding: 8px 16px;
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: auto;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+
+.navbar .nav-btn:hover {
+  background-color: #038c5a;
+}
+
+    
+        .container {
+            max-width: 1200px;
+          margin: auto;
+            padding: 2.5rem;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+
+        .section-title {
+            text-align: center;
+            align-items: center;
+
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        
+        .forms {
+            display:flex;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+          font-size: 40px;
+          
+        color: rgb(74, 74, 100);
+            margin-bottom: 3rem;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .forms input,
+        .forms textarea {
+            width: 80%;
+          padding: 20px;
+          
+background-color: rgb(9, 9, 73);
+color:white;
+            margin-bottom: 1.5rem;
+
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        
+        }
+
+        .forms textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .forms button {
+            background-color: #0056b3;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .forms button:hover {
+            background-color: #003d80;
+            color: #0b1c36;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        
+        .success-message {
+            color: green;
+            font-size: 1.2rem;
+            text-align: center;
+            display: none;
+        }
+        
+        .error-message {
+            color: red;
+            font-size: 1.2rem;
+            text-align: center;
+            display: none;
+        }
+         body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+}
+
+.footer {
+  background-color: #0b1c36;
+  color: white;
+  padding: 40px 20px 80px;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footer-logo .logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-logo .tagline {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #1abc9c;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer-links li {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-col p {
+  font-size: 14px;
+  margin: 8px 0;
+  color: #ccc;
+}
+
+.footer-col i {
+  margin-right: 8px;
+  color: #1abc9c;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  color: #aaa;
+  font-size: 13px;
+}
+
+
+.chat-bubble {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  font-size: 14px;
+}
+
+.chat-bubble a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.chat-bubble a i {
+  margin-left: 8px;
+}
+
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <nav class="navbar">
+        <a href="#" class="logo">SHURASH SCHOOLS</a>
+        
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/About.html">About</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/Gallery.html">Gallery</a></li>
+            <li><a href="/Contact.html">Contact</a></li>
+        <li> <a class="nav-btn"   href="/signIn.html">sign in</a></li>
+        <li> <a class="nav-btn"   href="/sign up.html">sign up</a></li>
+
+                        
+
+        </ul>
+    </nav>
+    <section class="hero">
+    </section>
+
+    <div class="container">
+
+        
+        <div class="forms">
+            <div>
+                <h3>Get in Touch</h3>
+                <form id="forms" >
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                              <a href="/Dashboard.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+   
+
+            </div>
+            
+
+
+</div>
+      <a href="/Dashboard.html">Dashboard</a>
+
+            </div>
+
+    
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="footer-container">
+      <!-- Column 1: Logo + Social -->
+      <div class="footer-col">
+        <div class="footer-logo">
+          <p class="tagline">Discover • Grow • Transform</p>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <hr />
+        <ul class="footer-links">
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Events</a></li>
+        </ul>
+      </div>
+        <div class="footer-col">
+        <p>Ngong Lane, Ngong Lane Plaza, 1st Floor, Nairobi Kenya</p>
+        <p><i class="fas fa-phone-alt"></i> +254711 082 146 (General Enquiries)</p>
+        <p><i class="fab fa-whatsapp"></i> +254721502859 (Whatsapp)</p>
+        <p><i class="fas fa-phone"></i> 0738 368 319 (Corporate Inquiries)</p>
+        <p><i class="fas fa-envelope"></i> contact@Shurashschool.com</p>
+        <p><i class="fas fa-envelope"></i> admissions@shurashschool.com</p>
+        <p><i class="fas fa-envelope"></i> corporate@shurashschool.com</p>
+        <p><i class="fas fa-envelope"></i> careerservices@shurashschool.com</p>
+        <p><i class="fas fa-envelope"></i> P.O Box 28860 - 00100, Nairobi</p>
+      </div>
+
+    
+      <div class="footer-col">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.143567769687!2d36.77464765!3d-1.3032065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10eb2074ef3b%3A0x42618e858ff23d78!2sGreenhouse%20Mall!5e0!3m2!1sen!2ske!4v1694439880844!5m2!1sen!2ske"
+          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    
+    <div class="footer-bottom">
+      <p>© 2025 Shurash School. All rights reserved.</p>
+    </div>
+
+    
+    <div class="chat-bubble">
+      <p>Got any Questions?</p>
+      <a href="https://wa.me/254721502859" target="_blank">Chat with us <i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+    <script>
+ 
+document.addEventListener("DOMContentLoaded",function(){
+  fetch('https://fatuma.onrender.com')
+  .then(res=>res.json())
+  .then(form=>{
+    form.forEach
+      
+    
+  })
+})
+function addTables(){
+      let table = document.getElementById("table");
+    let value = document.createElement("tr");
+    value.innerHTML = `
+        <td>${forms.Name}</td>
+        <td>${forms.Email}</td>
+        <td>${forms.Message}</td>
+<td><button>Delete</button></td>
+<td> <button class="update" >Update</button>
+</td>
+    `;
+    table.appendChild(value);
+
+}
+
+
+                  
+    document.getElementById("forms").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+  
+      const name=document.getElementById("name")
+        
+      const email=document.getElementById("email")
+        const message=document.getElementById("message")
+
+
+
+
+      const u = {
+      Name : name.value,
+      Email: email.value,
+      Message: message.value,
+      
+
+
+        
+      };
+        
+    
+
+      fetch("https://fatuma.onrender.com/form", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify(u)
+      })
+      
+    });
+  
+    function v(id){
+          fetch(`http://localhost:3000/form/${id}`,{
+            method:"DELETE",
+            headers:{
+              'content-type':'application/json'
+            }
+          })
+
+    }
+function updateForm(id) {
+  
+  const newName = prompt("Enter new name:");
+  const newEmail = prompt("Enter new email:");
+   const newMessage = prompt("Enter new message:");
+ 
+
+  const newForms = {
+    Name: newName,
+    Email: newEmail,
+    Message:newMessage
+  };
+
+  fetch(`http://localhost:3000/form/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(newForms)
+  })
+  .then(response => response.json())
+  .then(data => {
+    alert("Form updated successfully!");
+    
+  })
+  .catch(error => {
+    console.error("Error updating form:", error);
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

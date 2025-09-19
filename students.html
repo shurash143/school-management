@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+        <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pVfPQo9iRUOcpwT0ODC/kbMbz+L2J6C8R4mP6M07hpeVQ1q6HMXmvpD/CPpNvmXg5igjQw+jZTdKp+aW1N9V5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+/>
+
+
+    <style>
+    
+.header {
+  padding: 20px;
+  background-color: #f9fafb;
+}
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+.sidebar {
+  width: 220px;
+  background-color: #2f3542;
+  color: #fff;
+  padding: 20px 10px;
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+  
+}
+
+.sidebar nav ul li a {
+  color: #dcdde1;
+  text-decoration: none;
+  border: none;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  color: #00a8ff;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-bar {
+  flex-grow: 1;
+  margin: 0 15px;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.topbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.topbar .avatar {
+  width: 30px;
+  height: 30px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+}
+
+.menu-icon {
+  font-size: 20px;
+  color: #444;
+}
+
+.page-header {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header h2 {
+  margin: 0;
+}
+
+.page-header p {
+  margin: 4px 0 0;
+  color: #666;
+}
+
+.add-btn {
+  background-color: #22c55e;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.add-btn i {
+  margin-right: 6px;
+}
+
+
+.stats-cards {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 220px;
+}
+
+.icon {
+  font-size: 22px;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+}
+
+.icon.green {
+  background-color: #22c55e;
+}
+.icon.blue {
+  background-color: #3b82f6;
+}
+.icon.orange {
+  background-color: #f97316;
+}
+
+a{
+  text-decoration: none;
+}
+
+    
+    
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            padding: 5px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 40px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        li {
+            margin: 20px 0;
+            
+        }
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: #1d6de4;
+            padding: 10px 20px;
+            border: 2px solid #1d6de4;
+            border-radius: 10px;
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        a:hover {
+            background-color: #1d6de4;
+            color: white;
+        }
+        .fa-icon {
+            font-size: 26px;
+            color: #1d6de4;
+        }
+        a:hover .fa-icon {
+            color: white;
+        }
+    
+
+
+
+    </style>
+</head>
+<body>
+  <div class="container">
+   <aside class="sidebar">
+      <h2>School Students</h2>
+      <nav>
+        <ul>
+          <li><a href="/Dashboard.html">Dashboard</a></li>
+          <li><a href="/Teachers.html">Teachers</a></li>
+          <li><a href="/students.html">Students</a></li>
+          
+          <li><a href="/signIn.html">log out</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+
+    
+    <div>
+
+    <h1>Welcome to Your Assignment Dashboard</h1>
+    <h2>Prepared by Teacher Sarah</h2>
+    <ul>
+        <li><a href="/maths.html"><i class="fas fa-square-root-alt fa-icon"></i> Maths</a></li>
+        <li><a href="/english.html"><i class="fas fa-book fa-icon"></i> English</a></li>
+        <li><a href="/kiswahili.html"><i class="fas fa-language fa-icon"></i> Kiswahili</a></li>
+        <li><a href="/history.html"><i class="fas fa-landmark fa-icon"></i> History</a></li>
+        <li><a href="/ire.html"><i class="fas fa-mosque fa-icon"></i> IRE (Islamic Religious Education)</a></li>
+        <li><a href="/pe.html"><i class="fas fa-running fa-icon"></i> PE (Physical Education)</a></li>
+        <li><a href="/science .html"><i class="fas fa-flask fa-icon"></i> Science</a></li>
+        <li><a href="/cs.html"><i class="fas fa-laptop-code fa-icon"></i> Computer Science</a></li>
+    </ul>
+
+    </div>
+  </div>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+  const subjectsList = document.getElementById("subjectsList"); // or whatever your container id is
+
+  const subjects = JSON.parse(localStorage.getItem("subjects")) || [];
+
+  if (subjects.length === 0) {
+    subjectsList.innerHTML = "<p>No subjects found.</p>";
+    return;
+  }
+
+  let html = "<ul>";
+  subjects.forEach(subject => {
+    html += `
+      <li>
+        <strong>Subject:</strong> ${subject.Subject} <br>
+        <strong>Class:</strong> ${subject.Class} <br>
+        <strong>Schedule:</strong> ${subject.Schedule}
+      </li>
+    `;
+  });
+  html += "</ul>";
+
+  subjectsList.innerHTML = html;
+});
+
+  </script>
+
+
+
+</body>
+</html>

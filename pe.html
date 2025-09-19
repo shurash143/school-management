@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>PE Assignments - Teacher Sarah</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+        body { font-family: Arial, sans-serif; background: #f0f9ff; padding: 40px; max-width: 700px; margin: auto; }
+        header { display: flex; align-items: center; gap: 12px; margin-bottom: 30px; }
+        header i { font-size: 32px; color: #0a74da; }
+        h1 { font-weight: 700; color: #0a74da; margin: 0; }
+        .assignment-list { background: white; border-radius: 8px; padding: 20px 30px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .assignment-list h2 { border-bottom: 2px solid #0a74da; padding-bottom: 6px; margin-bottom: 15px; color: #333; }
+        ul { list-style: none; padding-left: 0; }
+        li { margin: 15px 0; font-size: 18px; }
+        li i { color: #0a74da; margin-right: 10px; }
+        /* Submission form container */
+form.submission-form {
+    margin-top: 40px;
+    background: #dff0ff; /* light blue background */
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    max-width: 700px;
+    font-family: Arial, sans-serif;
+}
+
+/* Form labels */
+form.submission-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #005f8a; /* dark blue */
+    font-size: 16px;
+}
+
+/* Text input and file input styles */
+form.submission-form input[type="text"],
+form.submission-form input[type="file"] {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #a1c8e9; /* light border */
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Submit button */
+form.submission-form button {
+    background-color: #0077b6; /* blue */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for submit button */
+form.submission-form button:hover {
+    background-color: #005f8a; /* darker blue */
+}
+
+/* Small note text */
+form.submission-form small {
+    color: #555;
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+        a.back-link {
+            display: inline-block; margin-top: 30px; text-decoration: none; color: #0a74da;
+            border: 2px solid #0a74da; padding: 8px 15px; border-radius: 6px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        a.back-link:hover { background-color: #0a74da; color: white; }
+    </style>
+</head>
+<body>
+
+<header>
+    <i class="fas fa-running"></i>
+    <h1>Physical Education Assignments</h1>
+</header>
+
+<div class="assignment-list">
+    <h2>Assignments for Grade 2</h2>
+    <ul>
+        <li><i class="fas fa-file-alt"></i> Practice basic stretching exercises.</li>
+        <li><i class="fas fa-file-alt"></i> Learn rules of simple games like tag.</li>
+    </ul>
+
+    <h2>Assignments for Grade 3</h2>
+    <ul>
+        <li><i class="fas fa-file-alt"></i> Participate in a team sport and write about the experience.</li>
+        <li><i class="fas fa-file-alt"></i> Practice balance and coordination exercises.</li>
+    </ul>
+
+    <h2>Assignments for Grade 4</h2>
+    <ul>
+        <li><i class="fas fa-file-alt"></i> Learn basic first aid procedures.</li>
+        <li><i class="fas fa-file-alt"></i> Create a fitness plan for one week.</li>
+    </ul>
+</div>
+
+<form class="submission-form" action="YOUR_SERVER_ENDPOINT_HERE" method="POST" enctype="multipart/form-data">
+    <h2>Submit Your Assignment</h2>
+    <label for="studentName">Student Name:</label>
+    <input type="text" id="studentName" name="studentName" placeholder="Enter your full name" required />
+
+    <label for="assignmentFile">Upload your assignment file:</label>
+    <input type="file" id="assignmentFile" name="assignmentFile" accept=".pdf,.doc,.docx,.jpg,.png" required />
+
+    <button type="submit">Submit Assignment</button>
+    <small>Note: Please fill your name and upload the correct file.</small>
+</form>
+
+
+<a href="/assignments.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+
+</body>
+</html>

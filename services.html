@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - School Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+        }
+        /* Hero Section Styling */
+.hero {
+    background: linear-gradient(to right, #4f46e5, #3b82f6); /* Gradient background */
+    background-image: url('/registration.mp4'); /* Background image */
+    background-size: cover; /* Ensures the background image covers the section */
+    background-position: center; /* Centers the background image */
+    padding: 100px 20px; /* Adds padding for spacing */
+    text-align: center; /* Centers the text inside the section */
+    color: white; 
+    height: 2vh;
+}
+
+/* Optional: Adding a subtle overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
+    z-index: 1; /* Places the overlay behind the text */
+}
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    height: 35vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centers content horizontally */
+    text-align: center;
+    color: white; /* Text color */
+}
+
+/* Video Background */
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the section like an image */
+    z-index: -1; /* Keeps the video behind the content */
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: blue;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: blue;
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   background-size: cover; 
+    z-index: -1;
+    padding: 2px;
+    margin-top:  0 auto;
+    margin-bottom: auto;
+    background-size: cover;
+}
+
+
+        
+        .navbar {
+            background-color: rgb(25, 25, 95);
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .navbar .logo {
+            font-size: 25px;
+             float: left;
+            
+            
+            color: #fff;
+            text-decoration: none;
+        }
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin: 0 1.5rem;
+        }
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .navbar ul li a:hover {
+            text-decoration: none;
+        }
+        navbar .btn {
+display: flex;
+gap: 10px;
+        }
+        
+
+.navbar .nav-btn {
+  padding: 8px 16px;
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: auto;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+
+.navbar .nav-btn:hover {
+  background-color: #038c5a;
+}
+
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        
+        .services {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .service-card {
+            background-color: #fff;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            width: 22%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card .icon {
+            font-size: 3rem;
+            color: #0056b3;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            color: #0056b3;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+}
+
+.footer {
+  background-color: #0b1c36;
+  color: white;
+  padding: 40px 20px 80px;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footer-logo .logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-logo .tagline {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #1abc9c;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer-links li {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-col p {
+  font-size: 14px;
+  margin: 8px 0;
+  color: #ccc;
+}
+
+.footer-col i {
+  margin-right: 8px;
+  color: #1abc9c;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* WhatsApp Chat Bubble */
+.chat-bubble {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  font-size: 14px;
+}
+
+.chat-bubble a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.chat-bubble a i {
+  margin-left: 8px;
+}
+
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <nav class="navbar">
+        <a href="#" class="logo">SHURASH SCHOOLS</a>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/About.html">About</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/Gallery.html">Gallery</a></li>
+            <li><a href="/Contact.html">Contact</a></li>
+            <li> <a class="nav-btn"   href="/signIn.html">sign in</a></li>
+             <li> <a class="nav-btn"   href="/sign up.html">sign up</a></li>
+
+        </ul>
+    </nav>
+    <div class="hero">
+    <video autoplay muted loop id="hero-video">
+        <source src="/t.mp4" type="video/mp4">
+    </video>
+    </div>
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+
+        <div class="services">
+            
+            <div class="service-card" id="student-management-card">
+                <div class="icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h3>Student Management</h3>
+                <p>Efficiently manage student information, track academic performance, and streamline the enrollment process.</p>
+            </div>
+
+            
+            <div class="service-card" id="teacher-management-card">
+                <div class="icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h3>Teacher Management</h3>
+                <p>Manage teacher profiles, schedules, performance tracking, and communication in a centralized system.</p>
+            </div>
+
+            
+            <div class="service-card" id="attendance-tracking-card">
+                <div class="icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h3>Attendance Tracking</h3>
+                <p>Track student attendance in real-time and generate reports for better monitoring and decision-making.</p>
+            </div>
+
+            
+            <div class="service-card" id="report-generation-card">
+                <div class="icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3>Report Generation</h3>
+                <p>Generate detailed reports on student performance, attendance, and other academic insights.</p>
+            </div>
+            
+<div class="service-card" id="library-management-card">
+    <div class="icon">
+        <i class="fas fa-book"></i>
+    </div>
+    <h3>Library Management</h3>
+    <p>Keep track of issued books, manage library inventory, and organize reading materials efficiently.</p>
+</div>
+
+
+<div class="service-card" id="notifications-card">
+    <div class="icon">
+        <i class="fas fa-bullhorn"></i>
+    </div>
+    <h3>Notifications & Announcements</h3>
+    <p>Send important updates, exam schedules, and announcements to students and staff instantly.</p>
+</div>
+
+        </div>
+
+    </div>
+        <footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="https://moringaschool.com/wp-content/uploads/2022/09/Moringa-logo-white.png" alt="Logo" class="logo">
+          <p class="tagline">Discover • Grow • Transform</p>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <hr />
+        <ul class="footer-links">
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Events</a></li>
+        </ul>
+      </div>
+     <div class="footer-col">
+        <p>Ngong Lane, Ngong Lane Plaza, 1st Floor, Nairobi Kenya</p>
+        <p><i class="fas fa-phone-alt"></i> +254711 082 146 (General Enquiries)</p>
+        <p><i class="fab fa-whatsapp"></i> +254721502859 (Whatsapp)</p>
+        <p><i class="fas fa-phone"></i> 0738 368 319 (Corporate Inquiries)</p>
+        <p><i class="fas fa-envelope"></i> contact@shurashschool.com</p>
+        <p><i class="fas fa-envelope"></i> admissions@shurashschool.com</p>
+        <p><i class="fas fa-envelope"></i> corporate@shurashschool.com</p>
+        <p><i class="fas fa-envelope"></i> careerservices@shurashschool.com</p>
+        <p><i class="fas fa-envelope"></i> P.O Box 28860 - 00100, Nairobi</p>
+      </div>
+
+      
+      <div class="footer-col">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.143567769687!2d36.77464765!3d-1.3032065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10eb2074ef3b%3A0x42618e858ff23d78!2sGreenhouse%20Mall!5e0!3m2!1sen!2ske!4v1694439880844!5m2!1sen!2ske"
+          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    
+    <div class="footer-bottom">
+      <p>© 2025 Shurash School. All rights reserved.</p>
+    </div>
+
+    
+    <div class="chat-bubble">
+      <p>Got any Questions?</p>
+      <a href="https://wa.me/254721502859" target="_blank">Chat with us <i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+    <script>
+        
+        document.getElementById("student-management-card").addEventListener("click", function() {
+            alert("Student Management: Efficiently manage student information, track academic performance, and streamline the enrollment process.");
+        });
+
+        document.getElementById("teacher-management-card").addEventListener("click", function() {
+            alert("Teacher Management: Manage teacher profiles, schedules, performance tracking, and communication in a centralized system.");
+        });
+
+        document.getElementById("attendance-tracking-card").addEventListener("click", function() {
+            alert("Attendance Tracking: Track student attendance in real-time and generate reports for better monitoring and decision-making.");
+        });
+
+        document.getElementById("report-generation-card").addEventListener("click", function() {
+            alert("Report Generation: Generate detailed reports on student performance, attendance, and other academic insights.");
+        });
+    </script>
+
+</body>
+</html>

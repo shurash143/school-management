@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- assignment-details.html -->
+<h2 id="title"></h2>
+<p><strong>Due:</strong> <span id="due"></span></p>
+<p id="description"></p>
+
+<h3>Submit Assignment</h3>
+<textarea id="submission-text" placeholder="Enter your answer here..."></textarea><br>
+<input type="file" id="submission-file"><br><br>
+<button onclick="submit()">Submit</button>
+
+<script>
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+function loadAssignmentDetails() {
+  const id = parseInt(getQueryParam("id"));
+  const assignments = JSON.parse(localStorage.getItem("assignments"));
+
+  const assignment = assignments.find(a => a.id === id);
+  if (!assignment) return;
+
+  document.getElementById("title").textContent = assignment.title;
+  document.getElementById("due").textContent = assignment.due;
+  document.getElementById("description").textContent = assignment.description;
+}
+
+function submit() {
+  const answer = document.getElementById("submission-text").value;
+  const file = document.getElementById("submission-file").files[0];
+
+  alert("Submitted successfully!");
+  console.log("Answer:", answer);
+  console.log("File:", file?.name);
+}
+
+window.onload = loadAssignmentDetails;
+</script>
+
+</body>
+</html>

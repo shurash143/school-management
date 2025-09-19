@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 25px;
+    width: 400px;
+    margin: 20px;
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    color: #2c3e50;
+}
+
+.card h2::before {
+    content: '👨‍🏫'; /* Use 👨‍🏫 or 🎓 for Student */
+    margin-right: 10px;
+}
+
+.card.student h2::before {
+    content: '🎓';
+}
+
+input[type="text"], input[type="number"], input[type="email"] {
+    width: 60%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+button {
+    width: 60%;
+    padding: 12px;
+    background-color: #2ecc71;
+    border: none;
+    
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+  a.back-link {
+            display: inline-block; margin-top: 30px; text-decoration: none; color: #d18b02;
+            border: 2px solid #d18b02; padding: 8px 15px; border-radius: 6px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        a.back-link:hover { background-color: #d18b02; color: white; }
+    </style>
+</head>
+<body>
+           <form id="add-student-form">
+                    <h3>Add New Student</h3>
+                    <input type="text" id="student-name" placeholder="Enter Student Name" />
+                    <input type="number" id="student-age" placeholder="Enter Age" />
+                    <input type="text" id="student-grade" placeholder="Enter Grade" />
+                       <input type="text" id="student-class" placeholder="Enter Class" />
+                    <input type="text" id="student-roll" placeholder="Enter Roll" />
+                    <input type="text" id="student-enrollment" placeholder="Enter Enrollment" />
+                    
+
+                    <button type="submit">Add Student</button>
+                </form> 
+                                 <a href="/Dashboard.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+
+<script>
+  //student
+
+    document.getElementById("add-student-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+  
+      const name=document.getElementById("student-name")
+      const age=document.getElementById("student-age")
+      const grade=document.getElementById("student-grade")
+      const classes=document.getElementById("student-class")
+      const roll=document.getElementById("student-roll")
+      const enrollment=document.getElementById("student-enrollment")
+
+
+
+      const s = {
+        Name: name.value,
+        Age: age.value,
+      Grade: grade.value,
+       Classes: classes.value,
+      Roll: roll.value,
+      Enrollment: enrollment.value
+  
+      };
+
+      fetch("https://fatuma.onrender.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(s),
+
+        
+      })
+    
+      
+    });
+    
+  
+function s(id){
+  fetch(`https://fatuma.onrender.com/${id}`, {
+
+method:"DELETE",
+headers:{
+  "content-type" : "application/json"
+}
+})
+}
+</script>
+</body>
+</html>

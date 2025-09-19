@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.hero {
+    background: linear-gradient(to right, #4f46e5, #3b82f6); 
+    background-image: url('/canva-sign-up-MAEEb51iby4.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    padding: 100px 20px; 
+    text-align: center; 
+    height: 40vh; 
+    
+}
+
+/* Optional: Adding a subtle overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1; 
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+.hero {
+    position: relative;
+    height: 40vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centers content horizontally */
+    text-align: center;
+    color: white; /* Text color */
+}
+
+/* Video Background */
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes the video cover the whole section */
+    z-index: -1; /* Places the video behind the content */
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensures content appears on top of the video */
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: blue;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: blue;
+}
+
+
+        .navbar {
+            background-color: rgb(25, 25, 95);
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            margin-top: 0px;
+        }
+        .navbar .logo {
+            font-size: 25px;
+            float: left;
+            
+            
+            color: #fff;
+            text-decoration: none;
+        }
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin: 0 1.5rem;
+        }
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .navbar ul li a:hover {
+            text-decoration: none;
+        }
+.navbar .btn {
+display: flex;
+gap: 10px;
+        }
+        
+
+.navbar .nav-btn {
+  padding: 8px 16px;
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: auto;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+
+.navbar .nav-btn:hover {
+  background-color: #038c5a;
+}
+
+form {
+  display: inline-block;
+  text-align: left;
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+input, select, button {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+}
+
+.footer {
+  background-color: #0b1c36;
+  color: white;
+  padding: 40px 20px 80px;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footer-logo .logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-logo .tagline {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #1abc9c;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer-links li {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-col p {
+  font-size: 14px;
+  margin: 8px 0;
+  color: #ccc;
+}
+
+.footer-col i {
+  margin-right: 8px;
+  color: #1abc9c;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* WhatsApp Chat Bubble */
+.chat-bubble {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  font-size: 14px;
+}
+
+.chat-bubble a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.chat-bubble a i {
+  margin-left: 8px;
+}
+
+
+  </style>
+</head>
+<body>
+
+      
+    <nav class="navbar">
+        <a href="#" class="logo">SHURASH SCHOOLS</a>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/About.html">About</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/Gallery.html">Gallery</a></li>
+            <li><a href="/Contact.html">Contact</a></li>
+ <li> <a class="nav-btn"   href="/signIn.html">sign in</a></li>
+ <li> <a class="nav-btn"  href="/sign up.html">sign up</a></li>
+
+        </ul>
+
+
+    </nav>
+    <section class="hero">
+    
+</section>
+
+  <h2>Sign Up</h2>
+  <form id="signupForm">
+    <input type="text" id="name"    name="name" placeholder="Full Name" required />
+    <input type="email" id="email"  name="email" id="Email"  placeholder="Email" required />
+    <input type="password" id="password"  name="password" id="password"  placeholder="Password" required />
+    <select name="role" required  id="role">
+      <option value="">Select Role</option>
+      <option value="Student">Students</option>
+      <option value="Teacher">Teachers</option>
+      <option value="Admin">Admin</option>
+            <option value="classes">classes</option>
+
+    </select>
+    <button type="submit">sign up</button>
+    <p>Already have an account? <a href="/signIn.html">Sign In</a></p>
+  </form>
+
+    <footer class="footer">
+    <div class="footer-container">
+      <!-- Column 1: Logo + Social -->
+      <div class="footer-col">
+        <div class="footer-logo">
+          <p class="tagline">Discover • Grow • Transform</p>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <hr />
+        <ul class="footer-links">
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Events</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2: Contact Info -->
+      <div class="footer-col">
+                <p>Ngong Lane, Ngong Lane Plaza, 1st Floor, Nairobi Kenya</p>
+
+        <p><i class="fas fa-phone-alt"></i> +254711 082 146 (General Enquiries)</p>
+        <p><i class="fab fa-whatsapp"></i> +254721502859 (Whatsapp)</p>
+        <p><i class="fas fa-phone"></i> 0738 368 319 (Corporate Inquiries)</p>
+        <p><i class="fas fa-envelope"></i> contact@shurashschool.com</p>
+        <p><i class="fas fa-envelope"></i> admissions@shurashschool.com</p>
+        <p><i class="fas fa-envelope"></i> corporate@shurashschool.com</p>
+        <p><i class="fas fa-envelope"></i> careerservices@shurashschool.com</p>
+        <p><i class="fas fa-envelope"></i> P.O Box 28860 - 00100, Nairobi</p>
+      </div>
+
+      <!-- Column 3: Google Map -->
+      <div class="footer-col">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.143567769687!2d36.77464765!3d-1.3032065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10eb2074ef3b%3A0x42618e858ff23d78!2sGreenhouse%20Mall!5e0!3m2!1sen!2ske!4v1694439880844!5m2!1sen!2ske"
+          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+      <p>© 2025 Shurash School. All rights reserved.</p>
+    </div>
+
+    <!-- WhatsApp Chat Bubble -->
+    <div class="chat-bubble">
+      <p>Got any Questions?</p>
+      <a href="https://wa.me/254721502859" target="_blank">Chat with us <i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
