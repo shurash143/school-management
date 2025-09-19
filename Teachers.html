@@ -598,7 +598,7 @@ function addAssignment() {
     };
 
     // Adjust endpoint to match your DB structure
-    fetch("http://localhost:3000/subjects", {
+    fetch("https://fatuma.onrender.com/subjects", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -653,7 +653,7 @@ function addAssignment() {
       DueDate: dueDate
     };
 
-    fetch("http://localhost:3000/assignments", {
+    fetch("https://fatuma.onrender.com/assignments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

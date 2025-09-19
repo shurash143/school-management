@@ -525,7 +525,7 @@ function addTables(){
     });
   
     function v(id){
-          fetch(`http://localhost:3000/form/${id}`,{
+          fetch(`https://fatuma.onrender.com/form/${id}`,{
             method:"DELETE",
             headers:{
               'content-type':'application/json'
@@ -546,7 +546,7 @@ function updateForm(id) {
     Message:newMessage
   };
 
-  fetch(`http://localhost:3000/form/${id}`, {
+  fetch(`https://fatuma.onrender.com/form/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json"
